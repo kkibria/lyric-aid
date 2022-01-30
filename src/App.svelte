@@ -1,13 +1,14 @@
 <script lang="ts">
-	import { checkText } from "./py";
-
+	import { getapi } from "./py";
 	export let name: string;
+
+	let api = getapi();
 	let value = `Some words are *italic*, some are **bold**`;
 
-	$: checkText(value);
+	$: api.checkText(value);
 
 	function handleClick() {
-		checkText(value);
+		api.checkText(value);
 	}
 </script>
 
@@ -33,7 +34,7 @@
 	h1 {
 		color: #ff3e00;
 		text-transform: uppercase;
-		font-size: 4em;
+		font-size: 2em;
 		font-weight: 100;
 	}
 

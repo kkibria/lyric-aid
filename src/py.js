@@ -1,10 +1,7 @@
-let ready = false;
-window.addEventListener('pywebviewready', function() {
-    ready = true;;
-})
+import { readable } from 'svelte/store';
+export const ready = readable(false, set => 
+    window.addEventListener('pywebviewready', () => set(true))
+);
+ 
+export const getapi = () => pywebview.api;
 
-export const checkText = async (v) => {
-    if (ready) {
-        await pywebview.api.checkText(v);
-    }
-}

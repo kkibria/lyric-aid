@@ -8,7 +8,6 @@ Powershell
 Invoke-WebRequest -Uri https://download.lfd.uci.edu/pythonlibs/x6hvwk7i/pythonnet-2.5.2-cp39-cp39-win_amd64.whl -OutFile pythonnet-2.5.2-cp39-cp39-win_amd64.whl
 ```
 
-
 ```bash
 pip install pythonnet-2.5.2-cp39-cp39-win_amd64.whl
 pip install pywebview

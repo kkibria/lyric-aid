@@ -1,9 +1,9 @@
-import App from './App.svelte';
+import PyApp from './PyApp.svelte';
 
-const app = new App({
+const app = new PyApp({
 	target: document.body,
 	props: {
-		name: 'world'
+		name: 'Python Webview Svelte'
 	}
 });
 
