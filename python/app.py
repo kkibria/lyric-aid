@@ -16,8 +16,6 @@ class Api():
     def sayHello(self):
         print("Hello")
 
-
-
 if __name__ == '__main__':
     api = Api()
     webview.create_window('Lyric Aid', url='../public/index.html', js_api=api, min_size=(600, 450))
