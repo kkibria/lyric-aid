@@ -1,22 +1,21 @@
 import os
 import webview
+import prosodic as p
 
 # API to the webview
 class Api():
-    def addItem(self, title):
-        print('Added item %s' % title)
-
-    def removeItem(self, item):
-        print('Removed item %s' % item)
-
-    def editItem(self, item):
-        print('Edited item %s' % item)
-
-    def toggleItem(self, item):
-        print('Toggled item %s' % item)
+    def checkText(self, text):
+        t = p.Text(text)
+        # t.parse()
+        # for parse in t.bestParses():
+        #     print (parse)
 
     def toggleFullscreen(self):
         webview.windows[0].toggle_fullscreen()
+
+    def sayHello(self):
+        print("Hello")
+
 
 
 if __name__ == '__main__':
