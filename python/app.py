@@ -1,11 +1,7 @@
 import os
 import webview
 
-"""
-An example of serverless app architecture
-"""
-
-
+# API to the webview
 class Api():
     def addItem(self, title):
         print('Added item %s' % title)
