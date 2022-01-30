@@ -2,9 +2,8 @@
 > See article [How to fix error during pythonnet installation](https://stackoverflow.com/questions/67418533/how-to-fix-error-during-pythonnet-installation).
 > Download [pythonnet-2.5.2-cp39-cp39-win_amd64.whl](https://download.lfd.uci.edu/pythonlibs/x6hvwk7i/pythonnet-2.5.2-cp39-cp39-win_amd64.whl) first.
 
-
 Powershell
-```psnpm
+```
 Invoke-WebRequest -Uri https://download.lfd.uci.edu/pythonlibs/x6hvwk7i/pythonnet-2.5.2-cp39-cp39-win_amd64.whl -OutFile pythonnet-2.5.2-cp39-cp39-win_amd64.whl
 ```
 
