@@ -4,11 +4,12 @@
 
 	let api = getapi();
 	let value = `Some words are *italic*, some are **bold**`;
+	let syl = [];
 
-	$: api.checkText(value);
+	$: getsyl(value);
 
-	function handleClick() {
-		api.checkText(value);
+	async function getsyl(v) {
+		syl = await api.checkText(v);
 	}
 </script>
 
@@ -20,7 +21,7 @@
 	</p>
 
 	<textarea bind:value />
-	<button on:click={handleClick}> Click me </button>
+	<pre> {syl} </pre>
 </main>
 
 <style>
