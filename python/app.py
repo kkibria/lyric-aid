@@ -10,10 +10,10 @@ DEFAULT_METER='default_english'
 # API to the webview
 class Api():
     def checkText(self, text):
-        t = p.Text(text)
+        # print(text)
         m = p.config['meters'][DEFAULT_METER]
+        t = p.Text(filename=text, lang='en', meter=m)
         t.parse(m)
-
         lines = []
         for parse in t.bestParses():
             output = []
@@ -22,8 +22,8 @@ class Api():
                 if pos.has_viol: x+='*'
                 output.append(x)
             lines.append(output)
+        # print(lines)
         return lines
-            # print (parse)
 
     def toggleFullscreen(self):
         webview.windows[0].toggle_fullscreen()
@@ -39,4 +39,7 @@ if __name__ == '__main__':
     api = Api()
     webview.create_window('Lyric Aid', url='../public/index.html', js_api=api, min_size=(600, 450))
     webview.start(debug=args.dev)
+    # s = "of mans first disobedience and the fruit\nbrought death into the world and all"
+    # r = api.checkText(s)
+    # print(r)
 
